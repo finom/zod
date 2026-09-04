@@ -75,6 +75,45 @@ const apiLibraries: ZodResource[] = [
   // },
 ];
 
+const aiLibraries: ZodResource[] = [
+  {
+    name: "Mastra",
+    url: "https://mastra.ai/",
+    description: "TypeScript agent framework; Zod schemas type tool inputs and structured output.",
+    slug: "mastra-ai/mastra",
+  },
+  {
+    name: "AI SDK",
+    url: "https://ai-sdk.dev/",
+    description: "Build AI-powered applications; Zod schemas define tool inputs and generateObject output.",
+    slug: "vercel/ai",
+  },
+  {
+    name: "LangChain.js",
+    url: "https://js.langchain.com/",
+    description: "Framework for building LLM applications, with Zod schemas for tools and structured output.",
+    slug: "langchain-ai/langchainjs",
+  },
+  {
+    name: "MCP TypeScript SDK",
+    url: "https://github.com/modelcontextprotocol/typescript-sdk",
+    description: "The official TypeScript SDK for the Model Context Protocol; tool inputs are Zod schemas.",
+    slug: "modelcontextprotocol/typescript-sdk",
+  },
+  {
+    name: "Genkit",
+    url: "https://genkit.dev/",
+    description: "Framework for building AI features, using Zod schemas for flows and tool definitions.",
+    slug: "genkit-ai/genkit",
+  },
+  {
+    name: "standard-tool",
+    url: "https://github.com/finom/standard-tool",
+    description: "One interface for an LLM tool, taking Zod schemas for its input and output.",
+    slug: "finom/standard-tool",
+  },
+];
+
 const formIntegrations: ZodResource[] = [
   {
     name: "regle",
@@ -406,6 +445,7 @@ const zodUtilities: ZodResource[] = [
 
 export {
   apiLibraries,
+  aiLibraries,
   formIntegrations,
   zodToXConverters,
   xToZodConverters,
@@ -455,6 +495,10 @@ async function ResourceTable({ resources }: ResourceTableProps) {
 
 export async function ApiLibraries() {
   return <ResourceTable resources={apiLibraries} />;
+}
+
+export async function AiLibraries() {
+  return <ResourceTable resources={aiLibraries} />;
 }
 
 export async function FormIntegrations() {
