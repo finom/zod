@@ -66,6 +66,12 @@ const apiLibraries: ZodResource[] = [
       "Use a single Zod schema as the source of truth for a GraphQL query, its inferred response type, and runtime validation.",
     slug: "mattiasahlsen/zodql",
   },
+  {
+    name: "Vovk.ts",
+    url: "https://vovk.dev",
+    description: "Next.js App Router back end with typed clients, OpenAPI and AI tools from Zod-validated procedures.",
+    slug: "finom/vovk",
+  },
   // https://github.com/honojs/middleware/tree/main/packages/zod-validator
   // {
   //   name: "@hono/zod-validator",
